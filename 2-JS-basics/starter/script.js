@@ -392,38 +392,95 @@ console.log(isDesigner);
 
 /***********
  * Coding challenge 3
- */
-
-var bill = [124, 48, 268];
 
 
 
-var tipCalc = function(bill){
 
-var tip = bill * multi;
 
-    switch(bill){
-    
-        case (bill < 50) :
-            var multi =  0.2;
+
+var bill1 = 124;
+var bill2 = 48;
+var bill3 = 268;
+
+
+var billArray = [bill1, bill2, bill3];
+
+
+
+function tipCalc(billValue){
+
+
+     
+        if (billValue < 50) {
+            var finalAmount = ( billValue * 0.2);
+         }
+
+        else if (billValue >= 50 && billValue <= 200) {
+            var finalAmount = (billValue * 0.15);
+         }
          
-        case bill >= 50 && bill <= 200:
-            var multi = 0.15;
-         
-        default:
-            var multi = 0.1;
-           
-    }
+        else if (billValue > 200) {
+            var finalAmount = (billValue * 0.10);
+           }
+           return finalAmount + billValue;
 }
 
 
 
-var tipTable = new Array(tipCalc(bill[0]), tipCalc(bill[1]), tipCalc(bill[2]));
-console.log(bill);
+var tipTable = [(tipCalc(bill1)), (tipCalc(bill2)), (tipCalc(bill3))];
+
+
 console.log(tipTable);
+console.log (billArray);
 
-console.log(bill[0]);
+*/
 
+
+/*******
+ * Objects and properties
+ 
+
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Jane', 'Mark', 'Bob', 'Emily' ],
+    job: 'teacher',
+    isMarried: false
+
+}
+
+console.log(john.firstName);
+console.log(john['lastName']);
+var x = 'birthYear' ;
+console.log(john[x]);
+john.job = 'designer';
+john['isMarried'] = true
+
+console.log(john);
+
+*/
+
+
+/***********
+ * Object and methods
+ 
+
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Jane', 'Mark', 'Bob', 'Emily' ],
+    job: 'teacher',
+    isMarried: false,
+    calcAge: function() {
+        this.age = 2019 - this.birthYear;
+    }
+}
+john.calcAge();
+console.log(john);
+
+*/
 
 
 
