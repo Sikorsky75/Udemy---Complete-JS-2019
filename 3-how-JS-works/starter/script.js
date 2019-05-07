@@ -1,20 +1,37 @@
 ///////////////////////////////////////
 // Lecture: Hoisting
 
+/*
+calculateAge(1990);
+
+// function declaration
+function calculateAge(year) {
+    console.log(2019 - year);
+}
+
+// retirement(1990);
+
+// function expression
+var retirement = function(year) {
+console.log(65 - (2019 - year));
+
+}
+
+// variables
+
+console.log(age);
+var age = 23;
 
 
+function foo() {
+    var age = 65;
+    console.log(age);
+}
 
+foo();
+console.log(age);
 
-
-
-
-
-
-
-
-
-
-
+*/
 
 
 ///////////////////////////////////////
@@ -36,7 +53,7 @@ function first() {
         console.log(a + b + c);
     }
 }
-*/
+ */
 
 
 
@@ -58,7 +75,8 @@ function first() {
 
 function third() {
     var d = 'John';
-    console.log(a + b + c + d);
+    // console.log(a + b + c + d);
+    console.log(a +d);
 }
 */
 
@@ -67,11 +85,43 @@ function third() {
 ///////////////////////////////////////
 // Lecture: The this keyword
 
+/*
+
+calculateAge(1985);
+
+function calculateAge(year) {
+console.log(2019 - year);
+console.log(this);
+}
 
 
+var john = {
+    name: 'John',
+    yearOfBirth: 1990,
+    calculateAge: function() {
+        console.log(this);
+        console.log(2019 - this.yearOfBirth);
+
+        function innerFunction() {
+            console.log(this);
+        }
+        innerFunction();
+
+    }
+
+}
+
+john.calculateAge();
+
+var mike = {
+    name: 'mike',
+    yearOfBirth: 1984
+
+}
+
+mike.calculateAge = john.calculateAge;
+mike.calculateAge();
 
 
-
-
-
+*/
 
