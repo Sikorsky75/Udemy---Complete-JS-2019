@@ -43,4 +43,5 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
     
     // update round score if rolled number was not a 1
 
+    
 });
