@@ -9,21 +9,11 @@ GAME RULES:
 
 */
 
-var scores, roundscore, activePlayer, dice;
+var scores, roundScore, activePlayer;
 
 scores = [0,0];
-rounScore = 0;
-activePlayer = 1;
-
-
-
-
-//document.querySelector('#current-' + activePlayer).textContent = dice;
-
-// document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>'
-
-//var x = document.querySelector('#score-0').textContent;
-//console.log(x);
+roundScore = 0;
+activePlayer = 0;
 
 document.querySelector('.dice').style.display = 'none';
 
@@ -39,9 +29,38 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
     //display result
     var diceDOM = document.querySelector('.dice');
     diceDOM.style.display = 'block';
-    diceDOM.src = 'dice-' + dice + '.png'
+    diceDOM.src = 'dice-' + dice + '.png';
     
     // update round score if rolled number was not a 1
+    if (dice !== 1) {
+        roundScore += dice;
+        document.querySelector('#current-' + activePlayer).textContent = roundScore;
+    } else {
+        activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+        roundScore = 0;
 
+        document.getElementById('current-0').textContent = '0';
+        document.getElementById('current-1').textContent = '0';
+
+        document.querySelector('.player-0-panel').classList.toggle('active');
+        document.querySelector('.player-1-panel').classList.toggle('active');
+
+        document.querySelector('.dice').style.display = 'none';
+    }
     
 });
+
+
+
+
+
+
+
+
+
+//document.querySelector('#current-' + activePlayer).textContent = dice;
+
+// document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>'
+
+//var x = document.querySelector('#score-0').textContent;
+//console.log(x);
