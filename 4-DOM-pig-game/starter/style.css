@@ -152,3 +152,31 @@ i {
 
 .winner { background-color: #f7f7f7; }
 .winner .player-name { font-weight: 300; color: #EB4D4D; }
+
+
+
+.win-value-field-label {  
+    position: absolute;
+    left: 50%;
+    bottom: 35px;
+    width: 100px;
+    transform: translateX(-50%);
+    text-align: center;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+    color: #555;
+    font-family: Lato;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: #EB4D4D;
+    color: #fff;
+    
+}
+
+.win-value-field {  
+    
+    width: 100px;
+    text-align: center;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: bold;
+}
