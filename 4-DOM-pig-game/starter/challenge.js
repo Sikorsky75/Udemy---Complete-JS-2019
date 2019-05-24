@@ -49,7 +49,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
         
         diceLeft = Math.floor(Math.random() * 6) + 1;
         diceRight = Math.floor(Math.random() * 6) + 1;
-              
+            
 
         //display result
         var diceDOMLeft = document.querySelector('.dice_left');
